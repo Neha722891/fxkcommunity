@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Gold Traders - Landing Page</title>
+    <style>
+        :root {
+            --primary-blue: #34aadc;
+            --btn-green: #006b35;
+            --btn-orange: #ff7b00;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            max-width: 900px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        .header-bar {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .content {
+            padding: 40px 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: #111;
+            border-radius: 10px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffd700;
+            font-size: 2rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: var(--primary-blue);
+        }
+
+        .subtitle {
+            color: #2d8a3c;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .trusted-text {
+            color: var(--text-dark);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: var(--text-light);
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            font-size: 1rem;
+        }
+
+        .disclaimer-small {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        /* Buttons Section */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 18px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .btn-telegram {
+            background-color: var(--btn-green);
+            box-shadow: 0 8px 15px rgba(0, 107, 53, 0.3);
+        }
+
+        .btn-broker {
+            background-color: var(--btn-orange);
+            box-shadow: 0 8px 15px rgba(255, 123, 0, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Timer */
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .timer-box {
+            background: #e1f5fe;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .footer-info {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .footer-links a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .managed-by {
+            margin-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        .meta-disclaimer {
+            margin-top: 25px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        @media (max-width: 600px) {
+            .btn {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-bar">
+        Join Our Free Trading Learning Community
+    </div>
+
+    <div class="content">
+        <div class="logo">
+            <div style="text-align: center; font-size: 12px;">LOGO<br>🏆</div>
+        </div>
+
+        <h1>Learn Smart Trading with <span>Elite Gold Traders</span></h1>
+        <p class="subtitle">Forex & Crypto Market Learning – Step by Step</p>
+        <p class="trusted-text">Trusted by 8,500+ Learners</p>
+
+        <p class="description">
+            Join our educational community to understand Forex & Crypto markets. Learn technical concepts, market psychology and risk management in a simple way.
+        </p>
+
+        <p class="disclaimer-small">
+            Educational purpose only • No guaranteed returns • Market risk involved
+        </p>
+
+        <div class="btn-container">
+            <a href="#" class="btn btn-telegram">View Community on Telegram</a>
+            <a href="#" class="btn btn-broker">Start Trading with a Trusted Forex Broker</a>
+        </div>
+
+        <div class="timer-container">
+            <div class="timer-box">09 Min</div>
+            <div class="timer-box">14 Sec</div>
+        </div>
+
+        <p class="footer-info">Telegram app users can join instantly with one click</p>
+
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> • <a href="#">Disclaimer</a> • <a href="#">Terms & Conditions</a>
+        </div>
+
+        <p class="managed-by">Ads Managed By <span style="color: #34aadc; font-weight: bold;">NetAD Expert</span></p>
+
+        <p class="meta-disclaimer">
+            This website is independent and not associated with Facebook™ or Meta Platforms Inc.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
