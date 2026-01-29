@@ -147,6 +147,7 @@
             border-radius: 30px;
             font-weight: bold;
             font-size: 1.1rem;
+            min-width: 80px;
         }
 
         .footer-info {
@@ -203,13 +204,13 @@
         </p>
 
         <div class="btn-container">
-            <a href="#" class="btn btn-telegram">View Community on Telegram</a>
-            <a href="#" class="btn btn-broker">Start Trading with a Trusted Forex Broker</a>
+            <a href="https://telegram.me/+Uwc4UokR7KM2NjY1" class="btn btn-telegram">View Community on Telegram</a>
+            <a href="https://telegram.me/+Uwc4UokR7KM2NjY1" class="btn btn-broker">Start Trading with a Trusted Forex Broker</a>
         </div>
 
         <div class="timer-container">
-            <div class="timer-box">09 Min</div>
-            <div class="timer-box">14 Sec</div>
+            <div class="timer-box" id="minutes">10 Min</div>
+            <div class="timer-box" id="seconds">00 Sec</div>
         </div>
 
         <p class="footer-info">Telegram app users can join instantly with one click</p>
@@ -218,13 +219,36 @@
             <a href="#">Privacy Policy</a> • <a href="#">Disclaimer</a> • <a href="#">Terms & Conditions</a>
         </div>
 
-        <p class="managed-by">Ads Managed By <span style="color: #34aadc; font-weight: bold;">NetAD Expert</span></p>
-
         <p class="meta-disclaimer">
             This website is independent and not associated with Facebook™ or Meta Platforms Inc.
         </p>
     </div>
 </div>
+
+<script>
+    // Simple 10-minute countdown logic
+    let time = 600; // 10 minutes in seconds
+    const minDisplay = document.getElementById('minutes');
+    const secDisplay = document.getElementById('seconds');
+
+    function updateTimer() {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+        
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        
+        minDisplay.innerHTML = `${minutes} Min`;
+        secDisplay.innerHTML = `${seconds} Sec`;
+
+        if (time > 0) {
+            time--;
+        } else {
+            time = 600; // Reset timer when it reaches zero (typical for landing pages)
+        }
+    }
+
+    setInterval(updateTimer, 1000);
+</script>
 
 </body>
 </html>
