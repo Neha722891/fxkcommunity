@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Gold Traders - Landing Page</title>
+    <title>Forex Expert | Digitaly King</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
-            --primary-blue: #34aadc;
-            --btn-green: #006b35;
-            --btn-orange: #ff7b00;
-            --text-dark: #333;
-            --text-light: #666;
+            --primary-color: #f39c12; /* Gold color */
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --tg-blue: #0088cc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f9;
-            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,230 +35,185 @@
         }
 
         .container {
-            background: white;
-            max-width: 900px;
+            max-width: 450px;
             width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 24px;
             text-align: center;
-            padding-bottom: 40px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .header-bar {
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 15px;
-            font-weight: bold;
-            font-size: 1.2rem;
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid var(--primary-color);
+            object-fit: cover;
+            transition: transform 0.3s ease;
         }
 
-        .content {
-            padding: 40px 20px;
-        }
-
-        .logo {
-            width: 100px;
-            height: 100px;
-            background-color: #111;
-            border-radius: 10px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffd700;
-            font-size: 2rem;
+        .profile-img:hover {
+            transform: scale(1.05);
         }
 
         h1 {
-            font-size: 1.8rem;
-            color: var(--text-dark);
-            margin-bottom: 10px;
+            font-size: 28px;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
-        h1 span {
-            color: var(--primary-blue);
+        .sub-count {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 25px;
+            display: block;
         }
 
-        .subtitle {
-            color: #2d8a3c;
-            font-weight: bold;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .trusted-text {
-            color: var(--text-dark);
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-
-        .description {
-            color: var(--text-light);
-            line-height: 1.6;
-            max-width: 700px;
-            margin: 0 auto 25px;
-            font-size: 1rem;
-        }
-
-        .disclaimer-small {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-bottom: 30px;
-        }
-
-        /* Buttons Section */
-        .btn-container {
-            display: flex;
-            justify-content: center;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 15px;
-            flex-wrap: wrap;
             margin-bottom: 30px;
         }
 
-        .btn {
-            padding: 18px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: inline-block;
+        .stat-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 12px;
         }
 
-        .btn-telegram {
-            background-color: var(--btn-green);
-            box-shadow: 0 8px 15px rgba(0, 107, 53, 0.3);
+        .stat-box h3 {
+            font-size: 18px;
+            color: var(--primary-color);
         }
 
-        .btn-broker {
-            background-color: var(--btn-orange);
-            box-shadow: 0 8px 15px rgba(255, 123, 0, 0.3);
+        .stat-box p {
+            font-size: 13px;
+            color: var(--text-dim);
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        .features {
+            text-align: left;
+            margin-bottom: 30px;
         }
 
-        /* Timer */
-        .timer-container {
+        .feature-item {
             display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .feature-item i {
+            color: var(--primary-color);
+            margin-right: 12px;
+            margin-top: 4px;
+        }
+
+        .cta-button {
+            display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 10px;
+            background: var(--tg-blue);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
             margin-bottom: 20px;
         }
 
-        .timer-box {
-            background: #e1f5fe;
-            color: #333;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            min-width: 80px;
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.4);
+            filter: brightness(1.1);
         }
 
-        .footer-info {
-            font-size: 0.9rem;
-            color: var(--text-light);
+        .cta-button i {
+            margin-right: 10px;
+            font-size: 22px;
         }
 
-        .footer-links a {
-            color: var(--primary-blue);
+        .footer-text {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+
+        .footer-text a {
+            color: var(--tg-blue);
             text-decoration: none;
-            margin: 0 5px;
+            font-weight: 600;
         }
 
-        .managed-by {
-            margin-top: 20px;
-            font-size: 0.85rem;
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .meta-disclaimer {
-            margin-top: 25px;
-            font-size: 0.8rem;
-            color: #999;
-        }
-
-        @media (max-width: 600px) {
-            .btn {
-                width: 90%;
-            }
+        .container {
+            animation: fadeIn 0.8s ease-out;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="header-bar">
-        Join Our Free Trading Learning Community
+    <div class="container">
+        <img src="https://digitalyking.com/wp-content/uploads/2025/07/my_image1743060797-2025-27-03-07-33-18.webp" alt="Forex Expert" class="profile-img">
+
+        <h1>Forex Expert</h1>
+        <span class="sub-count">18,970+ Subscribers</span>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <h3>10+ Yrs</h3>
+                <p>Experience</p>
+            </div>
+            <div class="stat-box">
+                <h3>7,000+</h3>
+                <p>Daily Followers</p>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-item">
+                <i class="fas fa-chart-line"></i>
+                <p>Earn With Forex Academy! 📈🎓</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-key"></i>
+                <p>Discover a secret, profitable method. 💼💸</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-users"></i>
+                <p>Trusted by 18K+ Global Users. 🤝💯</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-unlock-alt"></i>
+                <p>100% Supporting Community & Instant Access!</p>
+            </div>
+        </div>
+
+        <a href="https://telegram.me/+Uwc4UokR7KM2NjY1" class="cta-button">
+            <i class="fab fa-telegram-plane"></i> Join Our Community
+        </a>
+
+        <p class="footer-text">
+            If you have Telegram, you can view and join 
+            <a href="https://telegram.me/+j4-4rRJb6n00ZWY1">Forex & Crypto Expert</a> 
+            right away.
+        </p>
     </div>
-
-    <div class="content">
-        <div class="logo">
-            <div style="text-align: center; font-size: 12px;">LOGO<br>🏆</div>
-        </div>
-
-        <h1>Learn Smart Trading with <span>Elite Gold Traders</span></h1>
-        <p class="subtitle">Forex & Crypto Market Learning – Step by Step</p>
-        <p class="trusted-text">Trusted by 8,500+ Learners</p>
-
-        <p class="description">
-            Join our educational community to understand Forex & Crypto markets. Learn technical concepts, market psychology and risk management in a simple way.
-        </p>
-
-        <p class="disclaimer-small">
-            Educational purpose only • No guaranteed returns • Market risk involved
-        </p>
-
-        <div class="btn-container">
-            <a href="https://telegram.me/+Uwc4UokR7KM2NjY1" class="btn btn-telegram">View Community on Telegram</a>
-            <a href="https://telegram.me/+Uwc4UokR7KM2NjY1" class="btn btn-broker">Start Trading with a Trusted Forex Broker</a>
-        </div>
-
-        <div class="timer-container">
-            <div class="timer-box" id="minutes">10 Min</div>
-            <div class="timer-box" id="seconds">00 Sec</div>
-        </div>
-
-        <p class="footer-info">Telegram app users can join instantly with one click</p>
-
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a> • <a href="#">Disclaimer</a> • <a href="#">Terms & Conditions</a>
-        </div>
-
-        <p class="meta-disclaimer">
-            This website is independent and not associated with Facebook™ or Meta Platforms Inc.
-        </p>
-    </div>
-</div>
-
-<script>
-    // Simple 10-minute countdown logic
-    let time = 600; // 10 minutes in seconds
-    const minDisplay = document.getElementById('minutes');
-    const secDisplay = document.getElementById('seconds');
-
-    function updateTimer() {
-        const minutes = Math.floor(time / 60);
-        let seconds = time % 60;
-        
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-        
-        minDisplay.innerHTML = `${minutes} Min`;
-        secDisplay.innerHTML = `${seconds} Sec`;
-
-        if (time > 0) {
-            time--;
-        } else {
-            time = 600; // Reset timer when it reaches zero (typical for landing pages)
-        }
-    }
-
-    setInterval(updateTimer, 1000);
-</script>
 
 </body>
 </html>
